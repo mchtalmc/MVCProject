@@ -9,7 +9,9 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 public class WebAppInitializer  extends AbstractAnnotationConfigDispatcherServletInitializer {
     @Override  //Hibarnate/JDBC erisimi icin
     protected Class<?>[] getRootConfigClasses() {
-        return new Class[0];
+        return new Class[]{
+                RootContexConfig.class
+        };
     }
 
     @Override // Controller, Handler, Mapping, View , Resolver(MVC) ile ilgili config'leri icerir
