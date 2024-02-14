@@ -1,5 +1,6 @@
 package com.tpe;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
@@ -19,6 +20,7 @@ public class RootContexConfig {
     //Bu sekilde dogrudan enjekte edebiliyorum @Bean olusturmadan
     //Properties.source icerisinde belirtmis oldugum dosyadan direkt okumami sagliyor.
     //hibernateProperties methodunda properties'lere ulasabilmek icin kullandim.
+    @Autowired
     private Environment environment;
 
 
